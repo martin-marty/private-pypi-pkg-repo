@@ -4,5 +4,6 @@ try:
     __version__ = _version.version
 except ImportError:
     # package is not installed
-    __version__ = "0.0.0"
+    import importlib_metadata
+    __version__ = importlib_metadata.version("{$python_package}")
     pass

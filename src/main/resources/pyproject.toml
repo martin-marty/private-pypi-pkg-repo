@@ -1,0 +1,34 @@
+[project]
+name = "${python_package}"
+dynamic = ["version"]
+
+[tool.poetry]
+name = "${python_package}"
+version = "0.0.0"
+description = "${python_package}"
+authors = [
+    "Martin Whitehouse <martin@marty.me.uk>"
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "${python_package}.__version__"}
+readme = {file = ["README.rst"]}
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "wheel", "setuptools_scm>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+write_to = "${basedir}/src/main/resources/src/${python_package}/_version.py"
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "*"
+
+[tool.poetry.dev-dependencies]
+build = "*"
+sphinx = "*"
+tox = "*"
+wheel = "*"
+

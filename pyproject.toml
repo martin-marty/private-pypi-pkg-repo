@@ -2,6 +2,14 @@
 name = "pypi"
 dynamic = ["version"]
 
+[tool.poetry]
+name = "pypi"
+version = "0.0.0"
+description = "pypi"
+authors = [
+    "Martin Whitehouse <martin@marty.me.uk>"
+]
+
 [tool.setuptools.dynamic]
 version = {attr = "pypi.__version__"}
 readme = {file = ["README.rst"]}
@@ -12,4 +20,15 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools_scm]
 write_to = "src/pypi/_version.py"
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "*"
+
+[tool.poetry.dev-dependencies]
+build = "*"
+sphinx = "*"
+tox = "*"
+wheel = "*"
 

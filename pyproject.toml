@@ -19,7 +19,7 @@ requires = ["poetry-core>=1.0.0", "wheel", "setuptools_scm>=6.2"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools_scm]
-write_to = "src/pypi/_version.py"
+write_to = "/home/martin/eclipse-workspace/org.example/src/main/resources/src/pypi/_version.py"
 
 
 [tool.poetry.dependencies]

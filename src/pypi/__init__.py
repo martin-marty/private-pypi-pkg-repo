@@ -1,2 +1,8 @@
-from pkgutil import extend_path
-__path__ = extend_path(__path__, __name__)
+try:
+    from . import _version
+
+    __version__ = _version.version
+except ImportError:
+    # package is not installed
+    __version__ = "0.0.0"
+    pass
